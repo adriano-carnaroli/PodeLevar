@@ -28,6 +28,7 @@ struct Constants {
     static let cellphoneMaskNumbers = "(00) 00000-0000"
     static let cellphoneMaskKey = "(##) #####-####"
     static let dateMask = "00/00/0000"
+    static let zipcodeMask = "#####-###"
 
     static let imageEyeOn = "eyeOn"
     static let imageEyeOff = "eyeOff"

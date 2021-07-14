@@ -6,8 +6,17 @@ target 'PodeLevar' do
   use_frameworks!
 
   # Pods for PodeLevar
-  pod 'JMMaskTextField-Swift', '0.1.3'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+  pod 'Kingfisher'
+  pod 'ALLoadingView'
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'PanModal', '~> 1.2'
+  pod 'JMMaskTextField-Swift', '0.1.3'
+  pod 'ImageSlideshow', '~> 1.9.0'
+  pod 'ImageSlideshow/Kingfisher'
 
 end

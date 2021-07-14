@@ -120,9 +120,8 @@ extension String {
             .replacingOccurrences(of: "/", with: String.empty())
     }
 
-    public func removeMaskFromCellphone() -> String {
-        return self.replacingOccurrences(of: " ", with: String.empty())
-            .replacingOccurrences(of: "-", with: String.empty()).replacingOccurrences(of: "(", with: String.empty()).replacingOccurrences(of: ")", with: String.empty())
+    public func removeMaskFromZipcode() -> String {
+        return self.replacingOccurrences(of: "-", with: String.empty())
     }
 
     var localized: String {
@@ -145,12 +144,12 @@ extension String {
      }
 
     // MARK: - Email Validate
-    var isValidEmail: Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: self)
-    }
+//    var isValidEmail: Bool {
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//
+//        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+//        return emailTest.evaluate(with: self)
+//    }
 
     var isValidCellphone: Bool {
         let phoneRegex = "^\\([1-9]{2}\\) (?:[2-8]|9[1-9])[0-9]{3}\\-[0-9]{4}$"

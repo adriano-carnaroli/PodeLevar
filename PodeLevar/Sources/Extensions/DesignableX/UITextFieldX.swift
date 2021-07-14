@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import JMMaskTextField_Swift
 
 @IBDesignable
-class UITextFieldX: UITextField {
+class UITextFieldX: JMMaskTextField {
 
     @IBInspectable var pasteAction:Bool = true
     @IBInspectable private var selectAction:Bool = true
@@ -39,6 +40,13 @@ class UITextFieldX: UITextField {
         }
     }
 
+    @IBInspectable var placeholderColor: UIColor = .white {
+        didSet {
+            self.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
+                                         attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
+        }
+    }
+    
     private var _isRightViewVisible: Bool = true
     var isRightViewVisible: Bool {
         get {
