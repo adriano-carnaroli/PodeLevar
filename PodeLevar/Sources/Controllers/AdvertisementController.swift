@@ -74,19 +74,36 @@ class AdvertisementTableController: UITableViewController {
                 $0.insertDate! > $1.insertDate!
             }
             self?.announcements = sortedList
-            let parent = (self?.parent as? AdvertisementController)!
-            parent.btnFilter.isHidden = sortedList.isEmpty
-            parent.allAnnouncements = sortedList
-            parent.updateLblFilter()
+            if let parent = self?.parent as? AdvertisementController {
+                parent.btnFilter.isHidden = sortedList.isEmpty
+                parent.allAnnouncements = sortedList
+                parent.updateLblFilter()
+            } else if let parent = self?.parent as? MyAdvertisementController {
+                parent.allAnnouncements = sortedList
+                parent.updateLblFilter()
+            }
             self?.tableView.reloadData()
         }
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if announcements.isEmpty {
+            return tableView.bounds.height - 50
+        }
+        return 117
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if announcements.isEmpty {
+          return 1
+        }
         return announcements.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard !announcements.isEmpty else {
+          return tableView.dequeueReusableCell(withIdentifier: "EmptyCell")!
+        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AdvertisementCell.identifier, for: indexPath) as? AdvertisementCell else { return UITableViewCell() }
         let add = announcements[indexPath.row]
         cell.lblTitle.text = add.title

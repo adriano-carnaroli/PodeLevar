@@ -134,7 +134,7 @@ class NewAnnouncementTableController: UITableViewController, UICollectionViewDel
         announcement.userId = userID
         announcement.userName = userName
         announcement.announcementPics = selectedImages
-        announcement.title = txtTitle.text
+        announcement.title = txtTitle.text?.trim()
         announcement.description = txtDescription.text
         announcement.zipcode = txtZipcode.text
         announcement.state = address!.uf
@@ -226,6 +226,7 @@ extension NewAnnouncementTableController: UITextFieldDelegate, UITextViewDelegat
             }
             DispatchQueue.main.async {
                 self.updateAddress()
+                self.tableView.scroll(to: .bottom, animated: true)
                 self.showLoading(false)
             }
         })

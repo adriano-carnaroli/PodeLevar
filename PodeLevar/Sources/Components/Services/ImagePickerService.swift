@@ -41,6 +41,7 @@ class ImagePickerService: NSObject, UIImagePickerControllerDelegate, UINavigatio
       let cameraAction = UIAlertAction(title: "Câmera", style: .default) {[weak self] _ in
         guard let weakSelf = self else { return }
         weakSelf.picker.sourceType = .camera
+        weakSelf.picker.allowsEditing = false
         vc.present(weakSelf.picker, animated: true, completion: nil)
       }
       let photoAction = UIAlertAction(title: "Galeria", style: .default) {[weak self] _ in

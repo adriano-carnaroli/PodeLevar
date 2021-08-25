@@ -50,6 +50,9 @@ class FirestorageService {
                 completion(result)
                 return
             }
+        } else {
+            completion(.success)
+            return
         }
     }
     

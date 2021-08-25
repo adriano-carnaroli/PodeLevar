@@ -19,6 +19,18 @@ extension UIViewController {
         }
         ALLoadingView.manager.hideLoadingView()
     }
+    
+    func topMostViewController() -> UIViewController {
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            return topController
+        }else{
+            return self
+        }
+    }
 
     public func showToast(message:String, title:String?, image:UIImage?, tapCloseToast:(() -> Void)?, closeAutoToast:(() -> Void)?) {
         // create a new style

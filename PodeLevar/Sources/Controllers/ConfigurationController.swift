@@ -57,12 +57,17 @@ class ConfigurationTableController: UITableViewController {
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
     }
     
+    @IBAction func showMyAnnouncements(_ sender: UIButton) {
+        parent?.performSegue(withIdentifier: "segueMyAnnouncements", sender: nil)
+    }
+    
     func showError() {
         showToast(message: "Erro ao recuperar informações do usuário.", title: nil, image: nil, tapCloseToast: nil, closeAutoToast: nil)
     }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("teste")
     }
 
 }

@@ -34,6 +34,8 @@ class ObjectMessage: FireStorageCodable {
   var ownerID: String?
   var profilePicLink: String?
   var profilePic: UIImage?
+  var productId: String?
+  var productName: String?
 
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
@@ -44,6 +46,8 @@ class ObjectMessage: FireStorageCodable {
     try container.encodeIfPresent(profilePicLink, forKey: .profilePicLink)
     try container.encodeIfPresent(contentType.rawValue, forKey: .contentType)
     try container.encodeIfPresent(content, forKey: .content)
+    try container.encodeIfPresent(productId, forKey: .productId)
+    try container.encodeIfPresent(productName, forKey: .productName)
   }
   
   init() {}
@@ -60,6 +64,8 @@ class ObjectMessage: FireStorageCodable {
     if let contentTypeValue = try container.decodeIfPresent(Int.self, forKey: .contentType) {
       contentType = ContentType(rawValue: contentTypeValue) ?? ContentType.unknown
     }
+    productId = try container.decodeIfPresent(String.self, forKey: .productId)
+    productName = try container.decodeIfPresent(String.self, forKey: .productName)
   }
 }
 
@@ -72,6 +78,8 @@ extension ObjectMessage {
     case profilePicLink
     case contentType
     case content
+    case productId
+    case productName
   }
   
   enum ContentType: Int {

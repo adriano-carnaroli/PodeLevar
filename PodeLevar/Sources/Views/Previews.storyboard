@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Preview Controller-->
+        <scene sceneID="Oky-u0-vXi">
+            <objects>
+                <viewController storyboardIdentifier="ImagePreviewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kOO-sf-zLU" customClass="ImagePreviewController" customModule="PodeLevar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ir-3M-n0G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="6ee-eP-UZ8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BaM-aK-jKQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Cn-TX-8l8" appends="YES" id="pyz-jx-NUE"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BaM-aK-jKQ" secondAttribute="trailing" id="SLQ-mT-eTU"/>
+                                    <constraint firstItem="BaM-aK-jKQ" firstAttribute="leading" secondItem="6ee-eP-UZ8" secondAttribute="leading" id="eib-oX-N4J"/>
+                                    <constraint firstItem="BaM-aK-jKQ" firstAttribute="centerY" secondItem="6ee-eP-UZ8" secondAttribute="centerY" id="lp3-n7-EL1"/>
+                                    <constraint firstAttribute="bottom" secondItem="BaM-aK-jKQ" secondAttribute="bottom" id="oFD-n0-s64"/>
+                                    <constraint firstItem="BaM-aK-jKQ" firstAttribute="centerX" secondItem="6ee-eP-UZ8" secondAttribute="centerX" id="pwo-Z6-v2E"/>
+                                    <constraint firstItem="BaM-aK-jKQ" firstAttribute="top" secondItem="6ee-eP-UZ8" secondAttribute="top" id="qfb-85-iEk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="kOO-sf-zLU" id="jKr-0C-FI8"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJW-NY-Crx">
+                                <rect key="frame" x="330" y="64" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="8dz-gO-BJi"/>
+                                    <constraint firstAttribute="height" constant="25" id="jnh-Xj-Jfx"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="close"/>
+                                <connections>
+                                    <action selector="closePressed:" destination="kOO-sf-zLU" eventType="touchUpInside" id="DHN-Qf-rvp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4lI-7g-GxT"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6ee-eP-UZ8" secondAttribute="trailing" id="6Nt-AY-cLg"/>
+                            <constraint firstItem="6ee-eP-UZ8" firstAttribute="leading" secondItem="3Ir-3M-n0G" secondAttribute="leading" id="fig-fN-e4h"/>
+                            <constraint firstAttribute="bottom" secondItem="6ee-eP-UZ8" secondAttribute="bottom" id="jmx-bN-ugd"/>
+                            <constraint firstItem="HJW-NY-Crx" firstAttribute="top" secondItem="4lI-7g-GxT" secondAttribute="top" constant="20" id="mRH-Hf-scv"/>
+                            <constraint firstItem="6ee-eP-UZ8" firstAttribute="top" secondItem="3Ir-3M-n0G" secondAttribute="top" id="nbA-we-yWe"/>
+                            <constraint firstItem="4lI-7g-GxT" firstAttribute="trailing" secondItem="HJW-NY-Crx" secondAttribute="trailing" constant="20" id="omE-ns-qku"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="BaM-aK-jKQ" id="nOC-E6-2cV"/>
+                        <outlet property="scrollView" destination="6ee-eP-UZ8" id="tML-cb-IWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqL-C1-sPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="1Cn-TX-8l8">
+                    <connections>
+                        <action selector="doubleTapGesture:" destination="kOO-sf-zLU" id="yFj-17-BEs"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1328" y="970"/>
+        </scene>
+        <!--Map Preview Controller-->
+        <scene sceneID="y36-37-Evd">
+            <objects>
+                <viewController storyboardIdentifier="MapPreviewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9lx-gG-OwU" customClass="MapPreviewController" customModule="PodeLevar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2BI-E6-yau">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwc-e8-UJn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rea-98-Xb7">
+                                <rect key="frame" x="330" y="64" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="2Z1-Ns-gih"/>
+                                    <constraint firstAttribute="width" constant="25" id="8ey-Bx-nNt"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="close"/>
+                                <connections>
+                                    <action selector="closePressed:" destination="9lx-gG-OwU" eventType="touchUpInside" id="luJ-Qy-nWW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fwp-f7-4AM"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fwp-f7-4AM" firstAttribute="top" secondItem="Rea-98-Xb7" secondAttribute="top" constant="-20" id="3L0-fx-2ce"/>
+                            <constraint firstItem="lwc-e8-UJn" firstAttribute="top" secondItem="2BI-E6-yau" secondAttribute="top" id="4CN-Ca-vG5"/>
+                            <constraint firstItem="lwc-e8-UJn" firstAttribute="leading" secondItem="2BI-E6-yau" secondAttribute="leading" id="Pgt-HX-cHS"/>
+                            <constraint firstAttribute="bottom" secondItem="lwc-e8-UJn" secondAttribute="bottom" id="pFl-Ie-buN"/>
+                            <constraint firstItem="fwp-f7-4AM" firstAttribute="trailing" secondItem="Rea-98-Xb7" secondAttribute="trailing" constant="20" id="qxm-CW-EqG"/>
+                            <constraint firstAttribute="trailing" secondItem="lwc-e8-UJn" secondAttribute="trailing" id="xdk-Mz-SjC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="lwc-e8-UJn" id="Sbj-jh-mG0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4l6-6U-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="970"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="50" height="50"/>
+    </resources>
+</document>

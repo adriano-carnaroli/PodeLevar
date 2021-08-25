@@ -33,14 +33,26 @@ class DetailsTableController: UITableViewController {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblLocalization: UILabel!
     @IBOutlet weak var lblAdvertiser: UILabel!
+    @IBOutlet weak var btnStartChat: UIButton!
     @IBOutlet weak var lblPublicationDate: UILabel!
     @IBOutlet var slideshow: ImageSlideshow!
+    
+    private let userManager = UserManager()
+    private var conversations = [ObjectConversation]()
+    private let conversationManager = ConversationManager()
+    private let announcementManager = AnnouncementManager()
+    private var isMyAnnouncement = false
 
     var announcement:ObjectAnnouncement!
     var kingfisherSource:[KingfisherSource] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let currentID = userManager.currentUserID() else { return }
+        isMyAnnouncement = currentID == announcement.userId!
+        btnStartChat.setImage(UIImage(named: isMyAnnouncement ? "delete" : "send-message")  , for: .normal)
+        
+        fetchConversations()
         for url in announcement.announcementPicsLink! {
             kingfisherSource.append(KingfisherSource(urlString: url)!)
         }
@@ -61,6 +73,40 @@ class DetailsTableController: UITableViewController {
     @objc func didTap() {
         let fullScreenController = slideshow.presentFullScreenController(from: self)
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
+    }
+    
+    func fetchConversations() {
+        conversationManager.currentConversations {[weak self] conversations in
+            self?.conversations = conversations.sorted(by: {$0.timestamp > $1.timestamp})
+        }
+    }
+    
+    @IBAction func didSelectToChat(_ sender: Any) {
+        if isMyAnnouncement {
+            announcementManager.delete(announcement) { _ in
+                self.dismiss(animated: true) {
+                    self.topMostViewController().showToast(message: "Excluído com sucesso!", title: nil, image: nil, tapCloseToast: nil, closeAutoToast: nil)
+                }
+            }
+        } else {
+            guard let currentID = userManager.currentUserID() else { return }
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: MessagesContainerViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerChat") as! MessagesContainerViewController
+            if let conversation = conversations.filter({$0.userIDs.contains(announcement.userId!)}).first {
+                conversation.productId = announcement.id
+                conversation.productName = announcement.title
+                vc.conversation = conversation
+                show(vc, sender: self)
+                return
+            }
+            let conversation = ObjectConversation()
+            conversation.productId = announcement.id
+            conversation.productName = announcement.title
+            conversation.userIDs.append(contentsOf: [currentID, announcement.userId!])
+            conversation.isRead = [currentID: true, announcement.userId!: true]
+            vc.conversation = conversation
+            show(vc, sender: self)
+        }
     }
 }
 

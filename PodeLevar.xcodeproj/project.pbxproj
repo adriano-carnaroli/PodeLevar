@@ -79,6 +79,14 @@
 		30CD8B68263B2B180064C296 /* ObjectAnnouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8B67263B2B180064C296 /* ObjectAnnouncement.swift */; };
 		30CD8B88263B45430064C296 /* AnnouncementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8B87263B45430064C296 /* AnnouncementManager.swift */; };
 		30CD8B8B263B4F340064C296 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CD8B8A263B4F340064C296 /* UITableViewCell.swift */; };
+		30D765E726CC38CE00BB70CB /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765E626CC38CD00BB70CB /* ConversationsViewController.swift */; };
+		30D765E926CC390F00BB70CB /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765E826CC390F00BB70CB /* ConversationCell.swift */; };
+		30D765EB26CC3A9600BB70CB /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765EA26CC3A9600BB70CB /* MessagesViewController.swift */; };
+		30D765ED26CC3AB700BB70CB /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765EC26CC3AB700BB70CB /* MessageTableViewCell.swift */; };
+		30D765EF26D044AA00BB70CB /* MyAdvertisementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765EE26D044AA00BB70CB /* MyAdvertisementController.swift */; };
+		30D765F126D5809900BB70CB /* Previews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D765F026D5809900BB70CB /* Previews.storyboard */; };
+		30D765F626D580A200BB70CB /* MapPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765F326D580A200BB70CB /* MapPreviewController.swift */; };
+		30D765F826D580A200BB70CB /* ImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765F526D580A200BB70CB /* ImagePreviewController.swift */; };
 		A5328629BD82739C4A64D461 /* Pods_PodeLevar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7A7AB85092004353C9278C /* Pods_PodeLevar.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +165,14 @@
 		30CD8B67263B2B180064C296 /* ObjectAnnouncement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAnnouncement.swift; sourceTree = "<group>"; };
 		30CD8B87263B45430064C296 /* AnnouncementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementManager.swift; sourceTree = "<group>"; };
 		30CD8B8A263B4F340064C296 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		30D765E626CC38CD00BB70CB /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		30D765E826CC390F00BB70CB /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		30D765EA26CC3A9600BB70CB /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		30D765EC26CC3AB700BB70CB /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		30D765EE26D044AA00BB70CB /* MyAdvertisementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdvertisementController.swift; sourceTree = "<group>"; };
+		30D765F026D5809900BB70CB /* Previews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Previews.storyboard; sourceTree = "<group>"; };
+		30D765F326D580A200BB70CB /* MapPreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPreviewController.swift; sourceTree = "<group>"; };
+		30D765F526D580A200BB70CB /* ImagePreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewController.swift; sourceTree = "<group>"; };
 		43B7D5F4424E149D2BE5BB56 /* Pods-PodeLevar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodeLevar.debug.xcconfig"; path = "Target Support Files/Pods-PodeLevar/Pods-PodeLevar.debug.xcconfig"; sourceTree = "<group>"; };
 		4F4B8C770F2377ED4ABC978A /* Pods-PodeLevar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodeLevar.release.xcconfig"; path = "Target Support Files/Pods-PodeLevar/Pods-PodeLevar.release.xcconfig"; sourceTree = "<group>"; };
 		5F7A7AB85092004353C9278C /* Pods_PodeLevar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodeLevar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +303,8 @@
 			children = (
 				30245A48262D1B24006A3B18 /* AdvertisementCell.swift */,
 				30CD8B63263B292E0064C296 /* ThumbnailPictureCell.swift */,
+				30D765E826CC390F00BB70CB /* ConversationCell.swift */,
+				30D765EC26CC3AB700BB70CB /* MessageTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -389,6 +407,7 @@
 		309013672625DDCE0089A424 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				30D765F226D580A200BB70CB /* Previews */,
 				30245A16262BD071006A3B18 /* Application */,
 				302459E3262BCDEE006A3B18 /* Models */,
 				302459E7262BCDEF006A3B18 /* Services */,
@@ -418,6 +437,9 @@
 				309051FB263F4932009A547E /* DetailsController.swift */,
 				3090522A264187AC009A547E /* FilterController.swift */,
 				307AD95D269F6820002F088D /* ConfigurationController.swift */,
+				30D765E626CC38CD00BB70CB /* ConversationsViewController.swift */,
+				30D765EA26CC3A9600BB70CB /* MessagesViewController.swift */,
+				30D765EE26D044AA00BB70CB /* MyAdvertisementController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -425,6 +447,7 @@
 		3090136E2625DDCE0089A424 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30D765F026D5809900BB70CB /* Previews.storyboard */,
 				3090136F2625DDCE0089A424 /* LaunchScreen.storyboard */,
 				309013712625DDCE0089A424 /* Main.storyboard */,
 				3090139426261EC20089A424 /* Login.storyboard */,
@@ -454,6 +477,15 @@
 				30CD8B87263B45430064C296 /* AnnouncementManager.swift */,
 			);
 			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		30D765F226D580A200BB70CB /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				30D765F326D580A200BB70CB /* MapPreviewController.swift */,
+				30D765F526D580A200BB70CB /* ImagePreviewController.swift */,
+			);
+			path = Previews;
 			sourceTree = "<group>";
 		};
 		6BF30C44976CBA3D065193D1 /* Pods */ = {
@@ -533,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3090138A2625DDCE0089A424 /* LaunchScreen.storyboard in Resources */,
+				30D765F126D5809900BB70CB /* Previews.storyboard in Resources */,
 				309013832625DDCE0089A424 /* DesignableX.xcassets in Resources */,
 				309013922625FFD30089A424 /* Assests.xcassets in Resources */,
 				3090139526261EC20089A424 /* Login.storyboard in Resources */,
@@ -600,6 +633,7 @@
 				302459E1262BCD52006A3B18 /* ProfileManager.swift in Sources */,
 				3090522B264187AC009A547E /* FilterController.swift in Sources */,
 				30245A3D262BD071006A3B18 /* DictionaryExtension.swift in Sources */,
+				30D765F826D580A200BB70CB /* ImagePreviewController.swift in Sources */,
 				30245A3B262BD071006A3B18 /* UIFontExtension.swift in Sources */,
 				302459F2262BCDEF006A3B18 /* ImagePickerService.swift in Sources */,
 				30245A39262BD071006A3B18 /* UITableViewExtension.swift in Sources */,
@@ -628,7 +662,9 @@
 				302459DF262BCD52006A3B18 /* UserManager.swift in Sources */,
 				302459F0262BCDEF006A3B18 /* ObjectConversation.swift in Sources */,
 				30CD8B68263B2B180064C296 /* ObjectAnnouncement.swift in Sources */,
+				30D765EF26D044AA00BB70CB /* MyAdvertisementController.swift in Sources */,
 				309051F9263F3136009A547E /* ZipcodeResponse.swift in Sources */,
+				30D765ED26CC3AB700BB70CB /* MessageTableViewCell.swift in Sources */,
 				302459CD262BC97D006A3B18 /* LoginController.swift in Sources */,
 				302459F6262BCDEF006A3B18 /* FirestoreService.swift in Sources */,
 				30245A33262BD071006A3B18 /* OptionalExtension.swift in Sources */,
@@ -643,10 +679,14 @@
 				3090137C2625DDCE0089A424 /* UILabelX.swift in Sources */,
 				30245A45262BECAB006A3B18 /* RegisterController.swift in Sources */,
 				3090137F2625DDCE0089A424 /* UIImageViewX.swift in Sources */,
+				30D765E726CC38CE00BB70CB /* ConversationsViewController.swift in Sources */,
 				30CD8B88263B45430064C296 /* AnnouncementManager.swift in Sources */,
 				307AD95E269F6820002F088D /* ConfigurationController.swift in Sources */,
+				30D765EB26CC3A9600BB70CB /* MessagesViewController.swift in Sources */,
 				30CD8B64263B292E0064C296 /* ThumbnailPictureCell.swift in Sources */,
 				309013852625DDCE0089A424 /* String.swift in Sources */,
+				30D765F626D580A200BB70CB /* MapPreviewController.swift in Sources */,
+				30D765E926CC390F00BB70CB /* ConversationCell.swift in Sources */,
 				30245A3F262BD071006A3B18 /* KeyboardHandler.swift in Sources */,
 				302459EF262BCDEF006A3B18 /* ObjectUser.swift in Sources */,
 				30245A3E262BD071006A3B18 /* UIImageExtension.swift in Sources */,

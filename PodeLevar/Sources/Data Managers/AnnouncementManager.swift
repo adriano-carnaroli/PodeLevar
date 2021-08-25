@@ -27,6 +27,13 @@ class AnnouncementManager {
         })
     }
     
+    func delete(_ announcement: ObjectAnnouncement, _ completion: @escaping CompletionObject<FirestoreResponse>) {
+        let dataQuery = FirestoreService.DataQuery(key: "id", value: announcement.id, mode: .equal)
+        FirestoreService().delete(ObjectAnnouncement.self, reference: .init(location: .announcement), parameter: dataQuery) { result in
+            completion(result)
+        }
+    }
+    
     func update(announc: ObjectAnnouncement, completion: @escaping CompletionObject<FirestoreResponse>) {
         FirestorageService().update(announc, reference: .announcement) { response in
             switch response {
