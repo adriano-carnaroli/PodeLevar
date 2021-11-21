@@ -42,11 +42,27 @@ class UIViewX: UIView {
             updateView()
         }
     }
+    
+    @IBInspectable var fadeInBottom: Bool = false
+    @IBInspectable var fadeInBottomDelay: Double = 0.4
 
     override class var layerClass: AnyClass {
         {
             return CAGradientLayer.self
         }()
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        if fadeInBottom {
+            transform = CGAffineTransform(translationX: 0, y: -20)
+            alpha = 0
+            UIView.animate(withDuration: 0.8, delay: fadeInBottomDelay, options: .allowUserInteraction, animations: {
+                self.alpha = 1
+                self.transform = CGAffineTransform.identity
+                self.fadeInBottom = false
+            }, completion: nil)
+        }
     }
 
     func updateView() {

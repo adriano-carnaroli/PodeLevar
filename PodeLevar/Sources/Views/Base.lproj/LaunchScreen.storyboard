@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gA0-AD-xDl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="gcj-l7-B6B">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeg-84-iR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gA0-AD-xDl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oi5-uK-cgL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GIt-9D-JCB">
-                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="zz4-pa-Bsk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="n8Z-P7-LiU">
+                                <rect key="frame" x="-4" y="149.5" width="398" height="597"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="GIt-9D-JCB" secondAttribute="height" multiplier="1:1" id="G1q-00-VDR"/>
+                                    <constraint firstAttribute="width" secondItem="n8Z-P7-LiU" secondAttribute="height" multiplier="1:1.5" id="oR3-V8-DGE"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.13333333333333333" green="0.3411764705882353" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="o50-Hw-6HM"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.3411764706" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GIt-9D-JCB" secondAttribute="trailing" id="13N-wO-y1M"/>
-                            <constraint firstItem="GIt-9D-JCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5G1-jK-Ko5"/>
-                            <constraint firstItem="GIt-9D-JCB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="yYz-hY-prJ"/>
+                            <constraint firstItem="n8Z-P7-LiU" firstAttribute="centerY" secondItem="oi5-uK-cgL" secondAttribute="centerY" id="74K-vC-CCj"/>
+                            <constraint firstItem="n8Z-P7-LiU" firstAttribute="leading" secondItem="o50-Hw-6HM" secondAttribute="leading" constant="-4" id="8cN-U4-uCP"/>
+                            <constraint firstItem="zz4-pa-Bsk" firstAttribute="top" secondItem="oi5-uK-cgL" secondAttribute="top" id="PtN-Xi-QTX"/>
+                            <constraint firstItem="zz4-pa-Bsk" firstAttribute="trailing" secondItem="o50-Hw-6HM" secondAttribute="trailing" id="TpB-tz-GrM"/>
+                            <constraint firstItem="zz4-pa-Bsk" firstAttribute="leading" secondItem="o50-Hw-6HM" secondAttribute="leading" id="gIF-pZ-woO"/>
+                            <constraint firstItem="o50-Hw-6HM" firstAttribute="trailing" secondItem="n8Z-P7-LiU" secondAttribute="trailing" constant="20" id="iLh-59-RfO"/>
+                            <constraint firstAttribute="bottom" secondItem="zz4-pa-Bsk" secondAttribute="bottom" id="pfN-Cj-1sJ"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="446" y="370"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="280" height="280"/>
+        <image name="bg" width="750" height="1123"/>
+        <image name="splash" width="560" height="734"/>
     </resources>
 </document>

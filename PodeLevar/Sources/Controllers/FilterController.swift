@@ -16,6 +16,7 @@ class FilterController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     @IBOutlet weak var tableState: UITableView!
     @IBOutlet weak var tableCity: UITableView!
+    @IBOutlet weak var constraintWidthTableState: NSLayoutConstraint!
     var allAnnouncements:[ObjectAnnouncement] = []
     var list:[FilterList] = []
     var onClick:((_ state:String, _ city:String) -> Void)?
@@ -39,6 +40,7 @@ class FilterController: UIViewController, UITableViewDelegate, UITableViewDataSo
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        cell.tintColor = .white
         if tableCity == tableView {
             cell.accessoryType = .none
             let item = list.filter { $0.state == selectedState }
@@ -73,6 +75,10 @@ class FilterController: UIViewController, UITableViewDelegate, UITableViewDataSo
             if selectedState != list[indexPath.row].state {
                 selectedState = list[indexPath.row].state
                 selectedCity = ""
+                constraintWidthTableState.constant = 86
+                UIView.animate(withDuration: 0.5) {
+                    self.view.layoutIfNeeded()
+                }
                 tableCity.reloadData()
             }
         } else {

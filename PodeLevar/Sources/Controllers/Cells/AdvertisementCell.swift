@@ -17,6 +17,14 @@ class AdvertisementCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let path = UIBezierPath(roundedRect:imgPicture.bounds,
+                                byRoundingCorners:[.topRight, .bottomRight],
+                                cornerRadii: CGSize(width: 8, height:  8))
+
+        let maskLayer = CAShapeLayer()
+
+        maskLayer.path = path.cgPath
+        imgPicture.layer.mask = maskLayer
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

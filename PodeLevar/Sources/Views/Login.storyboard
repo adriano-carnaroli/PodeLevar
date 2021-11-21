@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJW-Vy-pgV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJW-Vy-pgV">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,39 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos começar!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGh-LC-iJh">
-                                <rect key="frame" x="61.5" y="60" width="252.5" height="43.5"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                <color key="textColor" red="0.8784313725490196" green="0.93725490196078431" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="A23-2b-HH7" customClass="UIImageViewX" customModule="PodeLevar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos começar!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGh-LC-iJh" customClass="UILabelX" customModule="PodeLevar" customModuleProvider="target">
+                                <rect key="frame" x="75.5" y="60" width="224" height="37"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="typingEfect" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fadeInBottom" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeInBottomDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzw-Xj-oMc" customClass="UIButtonX" customModule="PodeLevar" customModuleProvider="target">
-                                <rect key="frame" x="64" y="602" width="247" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gzw-Xj-oMc" customClass="UIButtonX" customModule="PodeLevar" customModuleProvider="target">
+                                <rect key="frame" x="64" y="614" width="247" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="9N1-Wg-eWu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                <state key="normal" title="Cadastre-se aqui!">
-                                    <color key="titleColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Não tenho cadastro">
+                                            <attributes>
+                                                <color key="NSColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="16" name="Verdana-Italic"/>
+                                                <font key="NSOriginalFont" size="14" name="Verdana-Italic"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fadeInBottom" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeInBottomDelay">
+                                        <real key="value" value="0.69999999999999996"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="ngM-bJ-IQX" kind="show" id="vIB-lO-AYm"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-Xs-4d7">
-                                <rect key="frame" x="0.0" y="119.5" width="375" height="466.5"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhn-Xs-4d7" customClass="UIViewX" customModule="PodeLevar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113" width="375" height="485"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fadeInBottom" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeInBottomDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="lNA-03-amF" kind="embed" id="oGl-b1-wu9"/>
                                 </connections>
@@ -56,13 +76,17 @@
                         <viewLayoutGuide key="safeArea" id="qg0-DL-HRk"/>
                         <color key="backgroundColor" red="0.13333333333333333" green="0.3411764705882353" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="A23-2b-HH7" firstAttribute="top" secondItem="pB1-cZ-i76" secondAttribute="top" id="1f8-Ol-RIx"/>
                             <constraint firstItem="Mhn-Xs-4d7" firstAttribute="trailing" secondItem="qg0-DL-HRk" secondAttribute="trailing" id="5Mq-a4-EqJ"/>
                             <constraint firstItem="Mhn-Xs-4d7" firstAttribute="leading" secondItem="qg0-DL-HRk" secondAttribute="leading" id="Emh-Cc-REd"/>
                             <constraint firstItem="Gzw-Xj-oMc" firstAttribute="top" secondItem="Mhn-Xs-4d7" secondAttribute="bottom" constant="16" id="FYn-d9-S6V"/>
+                            <constraint firstItem="A23-2b-HH7" firstAttribute="leading" secondItem="qg0-DL-HRk" secondAttribute="leading" id="FZ2-It-kri"/>
+                            <constraint firstItem="A23-2b-HH7" firstAttribute="bottom" secondItem="qg0-DL-HRk" secondAttribute="bottom" id="MB1-Yb-uxt"/>
                             <constraint firstItem="Gzw-Xj-oMc" firstAttribute="leading" secondItem="qg0-DL-HRk" secondAttribute="leading" constant="64" id="QEd-QL-Jmm"/>
+                            <constraint firstItem="A23-2b-HH7" firstAttribute="trailing" secondItem="qg0-DL-HRk" secondAttribute="trailing" id="R3o-s4-gty"/>
                             <constraint firstItem="TGh-LC-iJh" firstAttribute="centerX" secondItem="pB1-cZ-i76" secondAttribute="centerX" id="RZu-eX-dvV"/>
                             <constraint firstItem="Mhn-Xs-4d7" firstAttribute="top" secondItem="TGh-LC-iJh" secondAttribute="bottom" constant="16" id="dhs-ar-St0"/>
-                            <constraint firstItem="qg0-DL-HRk" firstAttribute="bottom" secondItem="Gzw-Xj-oMc" secondAttribute="bottom" constant="20" id="evU-hI-Dv5"/>
+                            <constraint firstItem="qg0-DL-HRk" firstAttribute="bottom" secondItem="Gzw-Xj-oMc" secondAttribute="bottom" constant="8" id="evU-hI-Dv5"/>
                             <constraint firstItem="TGh-LC-iJh" firstAttribute="top" secondItem="qg0-DL-HRk" secondAttribute="top" constant="60" id="iOX-Rq-shT"/>
                             <constraint firstItem="qg0-DL-HRk" firstAttribute="trailing" secondItem="Gzw-Xj-oMc" secondAttribute="trailing" constant="64" id="odZ-8U-d4h"/>
                         </constraints>
@@ -90,14 +114,14 @@
             <objects>
                 <tableViewController id="zkU-dx-H9v" customClass="RegisterTableController" customModule="PodeLevar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pm5-ps-D9C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="tIx-l5-PPI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="78" id="Yah-P3-pZD">
-                                        <rect key="frame" x="0.0" y="24.5" width="375" height="78"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yah-P3-pZD" id="6Ip-Y4-j52">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
@@ -152,7 +176,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="QvR-xB-4ue">
-                                        <rect key="frame" x="0.0" y="102.5" width="375" height="79"/>
+                                        <rect key="frame" x="0.0" y="122.5" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QvR-xB-4ue" id="S0q-eJ-1Qh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
@@ -164,7 +188,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="mPv-lW-jBR"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" textContentType="name"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -183,8 +207,8 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-1o-2wu">
-                                                    <rect key="frame" x="32" y="19" width="45" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="19" width="43" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -213,7 +237,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="uf9-3j-Ygu">
-                                        <rect key="frame" x="0.0" y="181.5" width="375" height="79"/>
+                                        <rect key="frame" x="0.0" y="201.5" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uf9-3j-Ygu" id="S3X-iv-cZf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
@@ -225,7 +249,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="Io4-Dt-nz4"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -244,8 +268,8 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwi-ZG-Y9f">
-                                                    <rect key="frame" x="32" y="19" width="50" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="19" width="45.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -274,7 +298,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="Nnq-uY-yif">
-                                        <rect key="frame" x="0.0" y="260.5" width="375" height="77"/>
+                                        <rect key="frame" x="0.0" y="280.5" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nnq-uY-yif" id="On8-wa-xBu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
@@ -286,7 +310,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="WCH-VW-gXb"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -305,8 +329,8 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ol2-s3-w3x">
-                                                    <rect key="frame" x="32" y="19" width="47" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="19" width="46.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -334,22 +358,22 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="RWD-dV-DUS">
-                                        <rect key="frame" x="0.0" y="337.5" width="375" height="77"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="86" id="RWD-dV-DUS">
+                                        <rect key="frame" x="0.0" y="357.5" width="375" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RWD-dV-DUS" id="rJa-Lz-fTd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8m-s1-ZhO" customClass="UIButtonX" customModule="PodeLevar" customModuleProvider="target">
-                                                    <rect key="frame" x="64" y="15" width="247" height="45"/>
+                                                    <rect key="frame" x="64" y="27" width="247" height="45"/>
                                                     <color key="backgroundColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="aoe-Xq-ODC"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="20"/>
                                                     <state key="normal" title="Registrar">
-                                                        <color key="titleColor" red="0.2196078431372549" green="0.4823529411764706" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.16470588235294117" green="0.51372549019607838" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -363,7 +387,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="u8m-s1-ZhO" firstAttribute="top" secondItem="rJa-Lz-fTd" secondAttribute="topMargin" constant="4" id="4Lg-c2-Hph"/>
+                                                <constraint firstItem="u8m-s1-ZhO" firstAttribute="top" secondItem="rJa-Lz-fTd" secondAttribute="topMargin" constant="16" id="4Lg-c2-Hph"/>
                                                 <constraint firstItem="u8m-s1-ZhO" firstAttribute="leading" secondItem="rJa-Lz-fTd" secondAttribute="leadingMargin" constant="48" id="Rbh-gf-4ja"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="u8m-s1-ZhO" secondAttribute="trailing" constant="48" id="mml-Vz-8Ug"/>
                                             </constraints>
@@ -397,14 +421,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-RR-SqO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novo usuário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-rD-BG7">
-                                <rect key="frame" x="84" y="40" width="207" height="44"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                <color key="textColor" red="0.87843137250000003" green="0.93725490199999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="98.5" y="40" width="178" height="37"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apy-e0-acH" customClass="UIButtonX" customModule="PodeLevar" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="42" width="40" height="40"/>
+                                <rect key="frame" x="0.0" y="38.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QuI-dp-ESp"/>
                                     <constraint firstAttribute="width" constant="40" id="l2H-9x-bpJ"/>
@@ -415,7 +442,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdI-NA-3bm">
-                                <rect key="frame" x="0.0" y="102" width="375" height="545"/>
+                                <rect key="frame" x="0.0" y="95" width="375" height="552"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="zkU-dx-H9v" kind="embed" id="SzD-1N-767"/>
@@ -423,15 +450,19 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XVi-hX-vZY"/>
-                        <color key="backgroundColor" red="0.2196078431372549" green="0.4823529411764706" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.29019607843137252" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SdI-NA-3bm" firstAttribute="bottom" secondItem="XVi-hX-vZY" secondAttribute="bottom" id="6nE-n7-PD7"/>
+                            <constraint firstItem="0NT-RR-SqO" firstAttribute="trailing" secondItem="XVi-hX-vZY" secondAttribute="trailing" id="70v-EC-jWJ"/>
                             <constraint firstItem="Apy-e0-acH" firstAttribute="centerY" secondItem="rQV-rD-BG7" secondAttribute="centerY" id="8Yw-16-Ueo"/>
+                            <constraint firstItem="0NT-RR-SqO" firstAttribute="top" secondItem="dEJ-3F-EIj" secondAttribute="top" id="DbT-Sb-C1F"/>
+                            <constraint firstItem="0NT-RR-SqO" firstAttribute="leading" secondItem="XVi-hX-vZY" secondAttribute="leading" id="JQi-u2-PoQ"/>
                             <constraint firstItem="SdI-NA-3bm" firstAttribute="trailing" secondItem="XVi-hX-vZY" secondAttribute="trailing" id="OsX-vS-2jV"/>
                             <constraint firstItem="SdI-NA-3bm" firstAttribute="top" secondItem="rQV-rD-BG7" secondAttribute="bottom" constant="18" id="Wge-kr-t0E"/>
                             <constraint firstItem="SdI-NA-3bm" firstAttribute="leading" secondItem="XVi-hX-vZY" secondAttribute="leading" id="XRj-mV-xd7"/>
                             <constraint firstItem="Apy-e0-acH" firstAttribute="leading" secondItem="XVi-hX-vZY" secondAttribute="leading" id="cko-QL-uLw"/>
                             <constraint firstItem="rQV-rD-BG7" firstAttribute="centerX" secondItem="dEJ-3F-EIj" secondAttribute="centerX" id="oIu-mN-v7L"/>
+                            <constraint firstItem="0NT-RR-SqO" firstAttribute="bottom" secondItem="XVi-hX-vZY" secondAttribute="bottom" id="tJu-Qz-L7L"/>
                             <constraint firstItem="rQV-rD-BG7" firstAttribute="top" secondItem="XVi-hX-vZY" secondAttribute="top" constant="40" id="yUG-uf-G3B"/>
                         </constraints>
                     </view>
@@ -439,21 +470,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egm-EZ-OsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="755"/>
+            <point key="canvasLocation" x="85.599999999999994" y="754.27286356821594"/>
         </scene>
         <!--Login Table Controller-->
         <scene sceneID="Cw3-hp-Cxw">
             <objects>
                 <tableViewController id="lNA-03-amF" customClass="LoginTableController" customModule="PodeLevar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8TO-ow-9xj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="466.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="nYu-YV-RDR">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="79" id="0Bv-wo-pr7">
-                                        <rect key="frame" x="0.0" y="24.5" width="375" height="79"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Bv-wo-pr7" id="Veo-sw-Ruf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
@@ -465,7 +496,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="lxc-tf-lg7"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -484,8 +515,8 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovn-WR-Rpe">
-                                                    <rect key="frame" x="32" y="19" width="50" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="19" width="45.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -514,7 +545,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="PR1-Lb-cc6">
-                                        <rect key="frame" x="0.0" y="103.5" width="375" height="77"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PR1-Lb-cc6" id="YrQ-8g-s0Z">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
@@ -526,7 +557,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="04m-2q-fjh"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -545,8 +576,8 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhu-B9-4w8">
-                                                    <rect key="frame" x="32" y="19" width="47" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="19" width="46.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                     <color key="textColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -574,26 +605,30 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="vdR-j4-hvu">
-                                        <rect key="frame" x="0.0" y="180.5" width="375" height="77"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="vdR-j4-hvu">
+                                        <rect key="frame" x="0.0" y="200.5" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdR-j4-hvu" id="4K9-aK-7DS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQz-tV-WAQ" customClass="UIButtonX" customModule="PodeLevar" customModuleProvider="target">
-                                                    <rect key="frame" x="64" y="15" width="247" height="45"/>
+                                                    <rect key="frame" x="64" y="27" width="247" height="45"/>
                                                     <color key="backgroundColor" red="0.89912563560000003" green="0.94561797380000001" blue="0.9675590396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="S4c-DS-LLq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="20"/>
                                                     <state key="normal" title="Entrar">
-                                                        <color key="titleColor" red="0.13333333333333333" green="0.3411764705882353" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.16470588235294117" green="0.51372549019607838" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="fadeInBottom" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fadeInBottomDelay">
+                                                            <real key="value" value="0.5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -603,7 +638,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="KQz-tV-WAQ" firstAttribute="top" secondItem="4K9-aK-7DS" secondAttribute="topMargin" constant="4" id="bIV-og-exG"/>
+                                                <constraint firstItem="KQz-tV-WAQ" firstAttribute="top" secondItem="4K9-aK-7DS" secondAttribute="topMargin" constant="16" id="bIV-og-exG"/>
                                                 <constraint firstItem="KQz-tV-WAQ" firstAttribute="leading" secondItem="4K9-aK-7DS" secondAttribute="leadingMargin" constant="48" id="fey-rv-i0u"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="KQz-tV-WAQ" secondAttribute="trailing" constant="48" id="ppx-PO-zNc"/>
                                             </constraints>
@@ -625,40 +660,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sa8-ZE-u5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="72"/>
+            <point key="canvasLocation" x="872.79999999999995" y="71.514242878560722"/>
         </scene>
     </scenes>
     <designables>
         <designable name="826-5L-Zwl">
-            <size key="intrinsicContentSize" width="136" height="19"/>
+            <size key="intrinsicContentSize" width="134.5" height="20"/>
         </designable>
         <designable name="Apy-e0-acH">
             <size key="intrinsicContentSize" width="14" height="23.5"/>
         </designable>
         <designable name="CMu-ls-gQP">
-            <size key="intrinsicContentSize" width="139" height="20"/>
+            <size key="intrinsicContentSize" width="134.5" height="21.5"/>
         </designable>
         <designable name="Gzw-Xj-oMc">
-            <size key="intrinsicContentSize" width="140" height="34"/>
+            <size key="intrinsicContentSize" width="158" height="31.5"/>
         </designable>
         <designable name="KQz-tV-WAQ">
-            <size key="intrinsicContentSize" width="56" height="34"/>
+            <size key="intrinsicContentSize" width="63" height="37"/>
         </designable>
         <designable name="TAF-9B-IHP">
-            <size key="intrinsicContentSize" width="136" height="19"/>
+            <size key="intrinsicContentSize" width="134.5" height="20"/>
         </designable>
         <designable name="aH2-us-8FF">
-            <size key="intrinsicContentSize" width="133.5" height="20"/>
+            <size key="intrinsicContentSize" width="131" height="21.5"/>
         </designable>
         <designable name="bi6-jf-Kt0">
-            <size key="intrinsicContentSize" width="139" height="20"/>
+            <size key="intrinsicContentSize" width="134.5" height="21.5"/>
         </designable>
         <designable name="u8m-s1-ZhO">
-            <size key="intrinsicContentSize" width="80" height="34"/>
+            <size key="intrinsicContentSize" width="92" height="37"/>
         </designable>
     </designables>
     <resources>
         <image name="arrowLeftWhite" width="14" height="23.5"/>
+        <image name="bg" width="750" height="1123"/>
         <image name="edit" width="261" height="259"/>
         <image name="email" width="24" height="24"/>
         <image name="name" width="24" height="24"/>

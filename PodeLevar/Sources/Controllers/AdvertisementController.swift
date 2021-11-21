@@ -37,7 +37,7 @@ class AdvertisementController: UIViewController {
         }
         childController.announcements = filterList
         childController.tableView.reloadData()
-        lblFilter.text = "Local: \(selectedState.isEmpty ? "Todos" : selectedState)\(selectedCity.isEmpty ? "" : " - \(selectedCity)") - Total: \(filterList.count)"
+        lblFilter.text = "Local: \(selectedState.isEmpty ? "Todos" : selectedState)\(selectedCity.isEmpty ? "" : " - \(selectedCity)") \nEncontramos \(filterList.count) ite\(filterList.count > 1 ? "ns" : "m")"
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -114,6 +114,7 @@ class AdvertisementTableController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if announcements.isEmpty { return }
         let item = announcements[indexPath.row]
         self.parent?.performSegue(withIdentifier: "segueDetails", sender: item)
     }
