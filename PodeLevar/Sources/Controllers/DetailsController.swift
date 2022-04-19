@@ -51,6 +51,12 @@ class DetailsTableController: UITableViewController {
         guard let currentID = userManager.currentUserID() else { return }
         isMyAnnouncement = currentID == announcement.userId!
         btnStartChat.setImage(UIImage(named: isMyAnnouncement ? "delete" : "send-message")  , for: .normal)
+        userManager.currentUserData {[weak self] user in
+            if let isMod = user?.isMod, isMod {
+                self?.isMyAnnouncement = true
+                self?.btnStartChat.setImage(UIImage(named: "delete")  , for: .normal)
+            }
+        }
         
         fetchConversations()
         for url in announcement.announcementPicsLink! {
@@ -107,6 +113,10 @@ class DetailsTableController: UITableViewController {
             vc.conversation = conversation
             show(vc, sender: self)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 
