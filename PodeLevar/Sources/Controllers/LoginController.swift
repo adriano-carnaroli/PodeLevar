@@ -9,11 +9,6 @@ import UIKit
 
 class LoginController: UIViewController {
     
-    //MARK: Lifecycle
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -34,43 +29,37 @@ class LoginTableController: UITableViewController {
     private var selectedImage: UIImage?
     private let manager = UserManager()
     
+    //MARK: Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setEnableHideKeyboardWhenTapped()
+        loginEmailTextField.delegate = self
+        loginPasswordTextField.delegate = self
         self.parent?.setEnableHideKeyboardWhenTapped()
-    }
-    
-    //MARK: Lifecycle
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        loginEmailTextField.text = "ross@teste.com"
-        loginPasswordTextField.text = "teste123"
     }
  
     @IBAction func login(_ sender: Any) {
-      guard let email = loginEmailTextField.text, let password = loginPasswordTextField.text else {
-        return
-      }
-      guard email.isValidEmail() else {
-        //separatorViews.filter({$0.tag == 0}).first?.backgroundColor = .red
-        return
-      }
-      guard password.count > 5 else {
-        //separatorViews.filter({$0.tag == 1}).first?.backgroundColor = .red
-        return
-      }
-      view.endEditing(true)
-      let user = ObjectUser()
-      user.email = email
-      user.password = password
-      showLoading(true)
-      manager.login(user: user) {[weak self] response in
-        ThemeService.showLoading(false)
-        switch response {
-        case .failure: self?.showAlert()
-        case .success: self?.parent?.performSegue(withIdentifier: "segueToMain", sender: nil)
+        guard let email = loginEmailTextField.text, let password = loginPasswordTextField.text else { return }
+        guard email.isValidEmail() else {
+            showToast(message: "E-mail inválido", title: nil, image: nil, tapCloseToast: nil, closeAutoToast: nil)
+            return
         }
-      }
+        guard password.count > 5 else {
+            showToast(message: "Senha deve ter ao menos 6 caracteres", title: nil, image: nil, tapCloseToast: nil, closeAutoToast: nil)
+            return
+        }
+        view.endEditing(true)
+        let user = ObjectUser()
+        user.email = email
+        user.password = password
+        showLoading(true)
+        manager.login(user: user) {[weak self] response in
+            ThemeService.showLoading(false)
+            switch response {
+            case .failure: self?.showAlert(message: "Não foi possível autenticar, verifique se os dados informados estão corretos.")
+            case .success: self?.parent?.performSegue(withIdentifier: "segueToMain", sender: nil)
+            }
+        }
     }
 }
 

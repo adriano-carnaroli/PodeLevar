@@ -24,7 +24,7 @@ import UIKit
 
 extension UIViewController {
   
-  func showAlert(title: String = "Erro", message: String = "Algo deu errado", completion: EmptyCompletion? = nil) {
+  func showAlert(title: String? = "Atenção", message: String = "Não foi possível processar sua requisição, tente novamente mais tarde.", completion: EmptyCompletion? = nil) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {_ in
       completion?()

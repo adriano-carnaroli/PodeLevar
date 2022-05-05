@@ -9,11 +9,6 @@ import UIKit
 
 class RegisterController: UIViewController {
     var loginController: LoginController!
-    
-    //MARK: Lifecycle
-    override func viewDidAppear(_ animated: Bool) {
-      super.viewDidAppear(animated)
-    }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
       return .lightContent
