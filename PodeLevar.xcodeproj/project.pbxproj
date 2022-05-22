@@ -87,10 +87,11 @@
 		30D765ED26CC3AB700BB70CB /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765EC26CC3AB700BB70CB /* MessageTableViewCell.swift */; };
 		30D765EF26D044AA00BB70CB /* MyAdvertisementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D765EE26D044AA00BB70CB /* MyAdvertisementController.swift */; };
 		30D765F126D5809900BB70CB /* Previews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D765F026D5809900BB70CB /* Previews.storyboard */; };
-		A5328629BD82739C4A64D461 /* Pods_PodeLevar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7A7AB85092004353C9278C /* Pods_PodeLevar.framework */; };
+		7C6EE89E70F2C1FB5514E55F /* Pods_PodeLevar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAE0A1B482F79E20DEA8881 /* Pods_PodeLevar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A7EE35967E0C805C6ED61C6 /* Pods-PodeLevar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodeLevar.release.xcconfig"; path = "Target Support Files/Pods-PodeLevar/Pods-PodeLevar.release.xcconfig"; sourceTree = "<group>"; };
 		30245965262BB50A006A3B18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		302459CC262BC97D006A3B18 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		30245A44262BECAA006A3B18 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -173,9 +174,8 @@
 		30D765EC26CC3AB700BB70CB /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		30D765EE26D044AA00BB70CB /* MyAdvertisementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdvertisementController.swift; sourceTree = "<group>"; };
 		30D765F026D5809900BB70CB /* Previews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Previews.storyboard; sourceTree = "<group>"; };
-		43B7D5F4424E149D2BE5BB56 /* Pods-PodeLevar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodeLevar.debug.xcconfig"; path = "Target Support Files/Pods-PodeLevar/Pods-PodeLevar.debug.xcconfig"; sourceTree = "<group>"; };
-		4F4B8C770F2377ED4ABC978A /* Pods-PodeLevar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodeLevar.release.xcconfig"; path = "Target Support Files/Pods-PodeLevar/Pods-PodeLevar.release.xcconfig"; sourceTree = "<group>"; };
-		5F7A7AB85092004353C9278C /* Pods_PodeLevar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodeLevar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EAE0A1B482F79E20DEA8881 /* Pods_PodeLevar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodeLevar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8979BF1847E206AAD7E64991 /* Pods-PodeLevar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodeLevar.debug.xcconfig"; path = "Target Support Files/Pods-PodeLevar/Pods-PodeLevar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5328629BD82739C4A64D461 /* Pods_PodeLevar.framework in Frameworks */,
+				7C6EE89E70F2C1FB5514E55F /* Pods_PodeLevar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +387,7 @@
 				309013382625DAA60089A424 /* PodeLevar */,
 				309013372625DAA60089A424 /* Products */,
 				6BF30C44976CBA3D065193D1 /* Pods */,
-				E37D259493DDCABA317306D7 /* Frameworks */,
+				E6ACF75DDFF05E91A38C2E88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -483,16 +483,16 @@
 		6BF30C44976CBA3D065193D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				43B7D5F4424E149D2BE5BB56 /* Pods-PodeLevar.debug.xcconfig */,
-				4F4B8C770F2377ED4ABC978A /* Pods-PodeLevar.release.xcconfig */,
+				8979BF1847E206AAD7E64991 /* Pods-PodeLevar.debug.xcconfig */,
+				0A7EE35967E0C805C6ED61C6 /* Pods-PodeLevar.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E37D259493DDCABA317306D7 /* Frameworks */ = {
+		E6ACF75DDFF05E91A38C2E88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F7A7AB85092004353C9278C /* Pods_PodeLevar.framework */,
+				4EAE0A1B482F79E20DEA8881 /* Pods_PodeLevar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -504,11 +504,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3090134A2625DAA90089A424 /* Build configuration list for PBXNativeTarget "PodeLevar" */;
 			buildPhases = (
-				7DC913E63914F8E0F0F75EF4 /* [CP] Check Pods Manifest.lock */,
+				C49C6CE9BE800F8D04814A81 /* [CP] Check Pods Manifest.lock */,
 				309013322625DAA60089A424 /* Sources */,
 				309013332625DAA60089A424 /* Frameworks */,
 				309013342625DAA60089A424 /* Resources */,
-				EC4CC261999F6B9970555DB0 /* [CP] Embed Pods Frameworks */,
+				4DC32906CB5E5C973179153C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -571,7 +571,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7DC913E63914F8E0F0F75EF4 /* [CP] Check Pods Manifest.lock */ = {
+		4DC32906CB5E5C973179153C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodeLevar/Pods-PodeLevar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodeLevar/Pods-PodeLevar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodeLevar/Pods-PodeLevar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C49C6CE9BE800F8D04814A81 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -591,23 +608,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC4CC261999F6B9970555DB0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodeLevar/Pods-PodeLevar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodeLevar/Pods-PodeLevar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodeLevar/Pods-PodeLevar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -765,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -820,7 +820,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -832,14 +832,14 @@
 		};
 		3090134B2625DAA90089A424 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43B7D5F4424E149D2BE5BB56 /* Pods-PodeLevar.debug.xcconfig */;
+			baseConfigurationReference = 8979BF1847E206AAD7E64991 /* Pods-PodeLevar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GU243F3Z7V;
+				DEVELOPMENT_TEAM = 38F3NF89DB;
 				INFOPLIST_FILE = PodeLevar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -853,14 +853,14 @@
 		};
 		3090134C2625DAA90089A424 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F4B8C770F2377ED4ABC978A /* Pods-PodeLevar.release.xcconfig */;
+			baseConfigurationReference = 0A7EE35967E0C805C6ED61C6 /* Pods-PodeLevar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GU243F3Z7V;
+				DEVELOPMENT_TEAM = 38F3NF89DB;
 				INFOPLIST_FILE = PodeLevar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
